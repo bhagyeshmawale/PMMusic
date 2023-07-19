@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   PM Music Academy
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- ======= Specials Section ======= -->
+    <section id="Course" class="specials mt-5">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Course</h2>
+          <p>Check Our Special Courses</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Begineer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Intermediate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">The Adult Piano Course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Pro Keyboard/Synthesizer course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Production</a>
+              </li>
+             
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Music For Little Mozarts Classroom Course (MLMC)</h3>
+                    <p class="fst-italic">Fundamentals of Music theory Age Group 3 to 12 years.</p>
+                    <p>Music Concepts like high and low sound, tempo of music,rhythm patterns, type of notes,building of music patterns,softege, the basic of reading music,dance style and history of music. </p>
+                    
+                  
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/kid1.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Junior Piano Course For Teenage Students</h3>
+                    <p class="fst-italic",style="color:#FFFFFF">Elementry Western Classical Theory, Introduction to music theory. Age Group 13 to 18 Years</p>
+                    <p>Focus on all round Musical Development,including repertoiree work,playing technique, scales, sight reading, aural training and music theory. Individual class plans charted out for each session.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/RPS.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Electronic Music Production</h3>
+                    <p class="fst-italic">In-depth study of Audio Recording using microphone, editing & DAW (Digital Audio Workshops) such as Logic Pro X.</p>
+                    <p>The Electronic Music Production is a rounded music course which covers many aspect of modern music production. The course is designed to help the student to start with an idea into full-fledged composition and production.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/production.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>The Adult Piano Course</h3>
+                    <p class="fst-italic">Module 1</p>
+                    <p>Intro,Rythm,History,Technique,Pitch</p>
+                    <p class="fst-italic">Module 2</p>
+                    <p>Student play melodies. Perpose of this module is to move confortably on the keyboard,while developing while developing pitch and rythm.</p>
+                    <p class="fst-italic">Module 3</p>
+                    <p>Students learn to play chords, Inversion, accompaniment patterns, and apply to learn/known melodies.</p>
+                    <p class="fst-italic">Module 4</p>
+                    <p>Sight Reading: Student being to learn to read staff notations.Theory: Ties, Slurs, Staccatos, Dynamics,Pause, Repeats.</p>
+                    <p class="fst-italic">Module 5</p>
+                    <p>Ensemble Playing, Western Classical Grade Pieces from Trinity College London, ABRSM.</p>
+                  
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Pro Keyboard/Synthesizer Course</h3>
+                    
+                    <p>The Pro Keyboard classes are aimed at creatinga versitile performer. The objective of these course is to learn diffrent geners of music like rock,Funk,etc..,that enables musician to use these skills both sessions playing or on the stage.An understanding of these styles not only helps student persuing independent music but also commercial Bollywood and non Bollywood music.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/key.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Specials Section -->
+
+{% endblock content %}

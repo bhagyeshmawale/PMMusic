@@ -1,0 +1,19 @@
+{
+    "params":
+
+    {
+        "local_server":"True",
+        "local_uri": "sqlite:///mydb.db",
+        "prod_uri": "sqlite:///mydb.db",
+        "twi_url": "https://www.twitter.com/pranitmawale",
+        "fb_url": "https://www.facebook.com/PranitMawale",
+        "gh_url": "https://www.facebook.com/PranitMawale",
+        "blog_name" : "Pranit Mawale's Music Academy",
+        "gmail-user":"bhagyeshmawale21@gmail.com",
+        "gmail-password":"21believe21",
+        "no of post":5
+
+
+
+    }
+}

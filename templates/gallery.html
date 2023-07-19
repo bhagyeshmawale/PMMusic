@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   PM Music Academy
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg mt-5">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What they're saying about us</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir is very passionate and patient teacher.My son throughly enjoys learning with him. He makes sure veeram also learns to compose songs and develop an ear for music.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Brinda Thakur</h3>
+                
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir is very patient with Ayaan.My son always looks forword to his piano lessons and throughly enjoyed the jam session that Pranit sir prepared him for.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Parveen Hashmi</h3>
+          
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir makes teaching in class intresting and explains till you understand.He is friendly but strict who guides you correctly to learn the instrument on which he has complete command.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Leena Patel</h3>
+             
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  The way of teaching is very good and explains everything in detail.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Hrikesh Thakersey</h3>
+                
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Attended First class, very good teacher. Understand how to handle small children.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Sudeep Hooda</h3>
+               
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Pranit Mawale's Music Gallery</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+        
+         <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pm_consert.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/pm_consert.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+         
+
+      
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pianopm.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/pianopm.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div> -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/ar pm.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/ar pm.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pm_group.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/studio.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/RPS.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/khamosh.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/Dream.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/Dream.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+         
+          
+              <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/piano.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/piano.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/piano.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/gh.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+{% endblock content %}
