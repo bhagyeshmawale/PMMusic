@@ -37,7 +37,7 @@ else:
     app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
 
 
-app.secret_key = "super secret key"
+app.secret_key = params["secret_key"]
 
 
 db = SQLAlchemy(app)
@@ -69,11 +69,7 @@ class User(db.Model):
     Password = db.Column(db.String(100), nullable=False)
     RegistrationDate = db.Column(db.String(12),nullable=False)
 
-    # def __init__(self, username, email, password,date):
-    #     self.Username = Username
-    #     self.Email = Email
-    #     self.Password = Password
-    #     self.RegistrationDate = RegistrationDate
+
 
 
 class Tutorial(db.Model):
