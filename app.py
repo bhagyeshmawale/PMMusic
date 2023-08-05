@@ -11,7 +11,8 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import json
 from flask_mail import Mail
-
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 with open('config.json','r') as c:
     params=json.load(c)["params"]
@@ -31,13 +32,17 @@ app.config.update(
     )
 #mail = Mail(app)
 
-if (local_Server):
-    app.config ['SQLALCHEMY_DATABASE_URI'] = params["local_uri"]
-else:
-    app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
-
+# if (local_Server):
+#     app.config ['SQLALCHEMY_DATABASE_URI'] = params["local_uri"]
+# else:
+#     app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
 
 app.secret_key = params["secret_key"]
+# app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'mydb.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 
 
 db = SQLAlchemy(app)
@@ -209,4 +214,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
