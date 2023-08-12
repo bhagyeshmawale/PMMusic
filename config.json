@@ -12,8 +12,8 @@
         "gmail-user":"bhagyeshmawale21@gmail.com",
         "gmail-password":"21believe21",
         "no of post":5,
-        "secret_key":"super secret key"
-
+        "secret_key":"super secret key",
+        "database":"mydb.db"
 
 
     }
