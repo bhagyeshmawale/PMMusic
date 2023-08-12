@@ -1,8 +1,8 @@
-from flask import Flask, render_template,session
+from flask import Flask, render_template,session,flash
 from flask import Flask, render_template, request
 from requests import Session
 from werkzeug.security import generate_password_hash
-
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.security import check_password_hash
 
@@ -38,8 +38,8 @@ app.config.update(
 #     app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
 
 app.secret_key = params["secret_key"]
-# app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'mydb.db')
+app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'mydb.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -151,15 +151,8 @@ def signup():
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
-        
-
-        entry = User(Username = username ,Email = email,Password = password,RegistrationDate=datetime.now())
-      
-
-        
-
-        # # Encrypt the password using generate_password_hash
-        # hashed_password = generate_password_hash(password)
+        hashed_password = generate_password_hash(password, method='sha256')
+        entry = User(Username = username ,Email = email,Password = hashed_password,RegistrationDate=datetime.now())
 
         db.session.add(entry)
         db.session.commit()
@@ -176,11 +169,12 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user = User.query.filter_by(Username=username).first()
-        if user and user.Password == password:
-            session['username'] = username
+        if user and check_password_hash(user.Password, password):
+            session['username'] = user.Username
+            flash('Login successful!', 'success')
             return redirect('/')
         else:
-            return 'Invalid username or password. Please try again.'
+            flash('Invalid email or password.', 'danger')
     return render_template('login.html')
 
 @app.route('/logout')
