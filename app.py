@@ -128,20 +128,20 @@ class Instructor(db.Model):
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html',params=params)
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html',params=params)
 
 @app.route('/course')
 def course():
-    return render_template('course.html')
+    return render_template('course.html',params=params)
 
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    return render_template('gallery.html',params=params)
 
 
 
@@ -161,7 +161,7 @@ def signup():
 
         return redirect(url_for("login"))
 
-    return render_template('signup.html')
+    return render_template('signup.html',params=params)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -175,7 +175,7 @@ def login():
             return redirect('/')
         else:
             flash('Invalid email or password.', 'danger')
-    return render_template('login.html')
+    return render_template('login.html',params=params)
 
 @app.route('/logout')
 def logout():
