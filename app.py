@@ -38,7 +38,6 @@ app.config.update(
 #     app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
 
 app.secret_key = params["secret_key"]
-# app.config ['SQLALCHEMY_DATABASE_URI'] = params["prod_uri"]
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, params["database"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
