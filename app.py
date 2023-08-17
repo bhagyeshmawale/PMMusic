@@ -5,7 +5,9 @@ from werkzeug.security import generate_password_hash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.security import check_password_hash
-
+import secrets
+import bcrypt
+import datetime
 
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -71,6 +73,8 @@ class User(db.Model):
     Username = db.Column(db.String(50), unique=True, nullable=False)
     Email = db.Column(db.String(100), unique=True, nullable=False)
     Password = db.Column(db.String(100), nullable=False)
+    reset_token = db.Column(db.String(128), unique=True)
+    token_expiry = db.Column(db.DateTime)
     RegistrationDate = db.Column(db.String(12),nullable=False)
 
 
@@ -125,6 +129,73 @@ class Instructor(db.Model):
         self.joining_date = joining_date
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(Username=username).first()
+        if user and check_password_hash(user.Password, password):
+            session['username'] = user.Username
+            flash('Login successful!', 'success')
+            return redirect('/')
+        else:
+            flash('Invalid email or password.', 'danger')
+    return render_template('login.html',params=params)
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect('/')
+
+def send_email(to, subject, message):
+    print(f"Email sent to {to}: Subject: {subject}\nMessage: {message}")
+
+@app.route("/forgot-password", methods=["GET", "POST"])
+def forgot_password():
+    if request.method == "POST":
+        email = request.form.get("email")
+        
+        if email in User:
+            user = user[email]
+            token = secrets.token_hex(16)
+            user["reset_token"] = token
+            user["token_expiry"] = datetime.datetime.now() + datetime.timedelta(hours=1)
+
+            reset_link = f"https://pmmusic.com/reset-password?token={token}"
+            send_email(email, "Password Reset Request", f"Click the link to reset your password: {reset_link}")
+            
+            flash("Password reset request sent. Check your email.")
+            return redirect(url_for("login"))
+        else:
+            flash("If the email exists, we've sent a reset link. Please check your email.")
+            return redirect(url_for("forgot_password"))
+    return render_template("forgot_password.html")
+
+@app.route("/reset-password", methods=["GET", "POST"])
+def reset_password():
+    token = request.args.get("token")
+    if token:
+        user = None
+        for email, data in user.items():
+            if data["reset_token"] == token and data["token_expiry"] > datetime.datetime.now():
+                user = data
+                break
+        if user:
+            if request.method == "POST":
+                new_password = request.form.get("new_password")
+                hashed_password = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt())
+                user["password"] = hashed_password
+                user["reset_token"] = None
+                user["token_expiry"] = None
+                
+                flash("Password reset successfully. You can now log in with your new password.")
+                return redirect(url_for("login"))
+            return render_template("reset_password.html")
+    flash("Invalid or expired token.")
+    return redirect(url_for("login"))
+
+
 @app.route('/')
 def home():
     return render_template('home.html',params=params)
@@ -151,7 +222,8 @@ def signup():
         email = request.form.get('email')
         password = request.form.get('password')
         hashed_password = generate_password_hash(password, method='sha256')
-        entry = User(Username = username ,Email = email,Password = hashed_password,RegistrationDate=datetime.now())
+        hashed_reset_token = generate_password_hash(password, method='sha256')
+        entry = User(Username = username ,Email = email,Password = hashed_password,reset_token=hashed_reset_token,token_expiry=datetime.now(),RegistrationDate=datetime.now())
 
         db.session.add(entry)
         db.session.commit()
@@ -162,24 +234,7 @@ def signup():
 
     return render_template('signup.html',params=params)
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        user = User.query.filter_by(Username=username).first()
-        if user and check_password_hash(user.Password, password):
-            session['username'] = user.Username
-            flash('Login successful!', 'success')
-            return redirect('/')
-        else:
-            flash('Invalid email or password.', 'danger')
-    return render_template('login.html',params=params)
 
-@app.route('/logout')
-def logout():
-    session.pop('username', None)
-    return redirect('/')
 
 
 @app.route("/contact",methods = ['POST', 'GET'])
