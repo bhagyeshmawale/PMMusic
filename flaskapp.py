@@ -262,4 +262,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=False,port=8086) 
+    app.run(debug=False,port=0.0.0.0) 
