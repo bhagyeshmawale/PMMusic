@@ -6,7 +6,7 @@ colorama==0.4.6
 Flask==2.3.2
 Flask-Mail==0.9.1
 Flask-SQLAlchemy==3.0.5
-greenlet==2.0.2
+greenlet
 idna==3.4
 importlib-metadata==6.8.0
 itsdangerous==2.1.2
@@ -20,3 +20,4 @@ Werkzeug==2.3.6
 zipp==3.16.2
 gunicorn
 bcrypt
+
