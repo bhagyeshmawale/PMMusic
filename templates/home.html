@@ -1,0 +1,899 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   PM Music Academy | Pranit Mawale Music Academy | Music For Little Mozarts Classroom Course (MLMC) | Junior Piano Course For Teenage Students |Grand Piano Classes | Electronic Music Production | Pro Keyboard/Synthesizer Course
+{% endblock %}
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+  
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 ><span><font face = "WildWest" size = "18">Pranit Mawale's Music Academy</font></span></h1>
+          <!-- <h2>Pranit Mawale's Music Academy</h2> -->
+
+          <!-- <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Log In</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Register Here</a>
+          </div> -->
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+          <a href="{{params['vidio_l']}}" class="glightbox play-btn"></a>
+      
+        </div>
+  
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="{{ url_for('static',filename='assets/img/img4.jpg')}}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>PRANIT MAWALE</h3>
+            <p >
+              <b>Music Director, Pianist, Keyboardist, Apple Certified Music Producer.</b>
+            </p>
+            <p >
+              <b>Graduated from KMMC Russian Piano Studio. (Dr. A.R. Rehman Music College)</b>
+            </p>
+            <ul>
+              <li></i> Experienced in Arranging music and Performing Piano solo's and Accompaning piano and keyboard for many classical, contemporary, fusion musician and composers including A.R. Rehman, Javed Ali and Amit Trivadi.</li>
+              <li></i>Scored,composed and played original Piano Arrengements for (original motion picture soundtrack) movie "1921" work also famous as "Aggresive Piano Theme"</li>
+              <li></i>Have arranged Rhythms for Marathi movie Aasud with legendary music director Anu Malik.</li>
+              <li></i>15 years of experience in in teaching Western Classical Music Theory And Western Classical Grand Piano and Keyboard.</li>
+              <li></i>Assisted recording and producing music for musician in Chennai. Toured India Performing diffrent generes of Music Conserts including Bollywood music with A.R. Rehman, Javed Ali etc.</li>
+              <li></i>Collabrated with Ace Theatre Director Actor Atul Kumar For music in his theatre project "Khwab Sa".An Adaptation of a Shakespearean play 'A Mid Summers's Night Dream'</li>
+              <li></i>Performed with the 'SOI' "Symphony Orchestra Of India", played for legendary musician and singers like Anandji Bhai Shah,Suresh Wadkar, Talat Aziz, Jolly Mukharjee, Babul Supriyo directed by Sanjay Mahale music condected by Yogesh Pradhan.</li>
+              
+            </ul>
+            <p>
+             
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <!-- <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Why Choose Our PM Music Academy</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Lorem Ipsum</h4>
+              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Repellat Nihil</h4>
+              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4> Ad ad velit qui</h4>
+              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div> -->
+    <!-- </section>End Why Us Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <!--<section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Menu</h2>
+          <p>Check Our Tasty Menu</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Bisque</a><span>$5.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bread Barrel</a><span>$6.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Crab Cake</a><span>$7.95</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/caesar.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caesar Selections</a><span>$8.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Tuscan Grilled</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mozzarella Stick</a><span>$4.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Greek Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-salads">
+            <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spinach Salad</a><span>$9.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-specialty">
+            <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Roll</a><span>$12.95</span>
+            </div>
+            <div class="menu-ingredients">
+              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>--><!-- End Menu Section -->
+
+    <!-- ======= Specials Section ======= -->
+    <section id="Course" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Course</h2>
+          <p>Check Our Special Courses</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Begineer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Intermediate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">The Adult Piano Course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Pro Keyboard/Synthesizer course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Production</a>
+              </li>
+             
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Music For Little Mozarts Classroom Course (MLMC)</h3>
+                    <p class="fst-italic">Fundamentals of Music theory Age Group 3 to 12 years.</p>
+                    <p>Music Concepts like high and low sound, tempo of music,rhythm patterns, type of notes,building of music patterns,softege, the basic of reading music,dance style and history of music. </p>
+                    
+                  
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/kid1.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Junior Piano Course For Teenage Students</h3>
+                    <p class="fst-italic",style="color:#FFFFFF">Elementry Western Classical Theory, Introduction to music theory. Age Group 13 to 18 Years</p>
+                    <p>Focus on all round Musical Development,including repertoiree work,playing technique, scales, sight reading, aural training and music theory. Individual class plans charted out for each session.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/RPS.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Electronic Music Production</h3>
+                    <p class="fst-italic">In-depth study of Audio Recording using microphone, editing & DAW (Digital Audio Workshops) such as Logic Pro X.</p>
+                    <p>The Electronic Music Production is a rounded music course which covers many aspect of modern music production. The course is designed to help the student to start with an idea into full-fledged composition and production.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/production.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>The Adult Piano Course</h3>
+                    <p class="fst-italic">Module 1</p>
+                    <p>Intro,Rythm,History,Technique,Pitch</p>
+                    <p class="fst-italic">Module 2</p>
+                    <p>Student play melodies. Perpose of this module is to move confortably on the keyboard,while developing while developing pitch and rythm.</p>
+                    <p class="fst-italic">Module 3</p>
+                    <p>Students learn to play chords, Inversion, accompaniment patterns, and apply to learn/known melodies.</p>
+                    <p class="fst-italic">Module 4</p>
+                    <p>Sight Reading: Student being to learn to read staff notations.Theory: Ties, Slurs, Staccatos, Dynamics,Pause, Repeats.</p>
+                    <p class="fst-italic">Module 5</p>
+                    <p>Ensemble Playing, Western Classical Grade Pieces from Trinity College London, ABRSM.</p>
+                  
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Pro Keyboard/Synthesizer Course</h3>
+                    
+                    <p>The Pro Keyboard classes are aimed at creatinga versitile performer. The objective of these course is to learn diffrent geners of music like rock,Funk,etc..,that enables musician to use these skills both sessions playing or on the stage.An understanding of these styles not only helps student persuing independent music but also commercial Bollywood and non Bollywood music.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{{ url_for('static',filename='assets/img/key.jpg')}}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Specials Section -->
+
+    <!-- ======= Events Section ======= -->
+    <!-- <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Events</h2>
+          <p>Organize Your Events in our PM Music Academy</p>
+        </div>
+
+        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{{ url_for('static',filename='assets/img/pm_ar.jpg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>$189</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  </ul>
+                  <p>
+                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur
+                  </p>
+                </div>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{{ url_for('static',filename='assets/img/piano.jpg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>$290</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  </ul>
+                  <p>
+                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur
+                  </p>
+                </div>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="{{ url_for('static',filename='assets/img/Dream.jpg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Custom Parties</h3>
+                  <div class="price">
+                    <p><span>$99</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  </ul>
+                  <p>
+                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur
+                  </p>
+                </div>
+              </div>
+            </div>End testimonial item -->
+
+          <!-- </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div> -->
+    <!-- </section>End Events Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <!-- <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Reservation</h2>
+          <p>Book a Table</p>
+        </div>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Book a Table</button></div>
+        </form>
+
+      </div>
+    </section> -->
+    <!-- End Book A Table Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What they're saying about us</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir is very passionate and patient teacher.My son throughly enjoys learning with him. He makes sure veeram also learns to compose songs and develop an ear for music.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Brinda Thakur</h3>
+                
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir is very patient with Ayaan.My son always looks forword to his piano lessons and throughly enjoyed the jam session that Pranit sir prepared him for.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Parveen Hashmi</h3>
+          
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Pranit Sir makes teaching in class intresting and explains till you understand.He is friendly but strict who guides you correctly to learn the instrument on which he has complete command.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Leena Patel</h3>
+             
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  The way of teaching is very good and explains everything in detail.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Hrikesh Thakersey</h3>
+                
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Attended First class, very good teacher. Understand how to handle small children.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Sudeep Hooda</h3>
+               
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Pranit Mawale's Music Gallery</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+    
+     <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pm_consert.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/pm_consert.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+         
+
+      
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/myclassroom.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/suresh wadkar.png')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/suresh wadkar.png')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/ar pm.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/ar pm.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pm_group.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/studio.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/RPS.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/khamosh.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/Dream.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/Dream.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+         
+      
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/piano.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/piano.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/pm.jpg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/pm.jpg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/img1.jpeg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/img1.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/img5.jpeg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/img5.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{{ url_for('static',filename='assets/img/img2.jpeg')}}" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="{{ url_for('static',filename='assets/img/img2.jpeg')}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <!--<section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Chefs</h2>
+          <p>Our Proffesional Chefs</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>--><!-- End Chefs Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      <!--<div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>-->
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4><b>Location:</b></h4>
+                <p>Mumbai, INDIA</p>
+              </div>
+
+              <div class="open-hours">
+                <i class="bi bi-clock"></i>
+                <h4><b>Open Hours:</b></h4>
+                <p>
+                  <b>Monday-Saturday:</b><br>
+                  10:00 AM - 08:00 PM
+                </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4><b>Email:</b></h4>
+                <p>pmmusicacademy1@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4><b>Call:</b></h4>
+                <p>+91 8879833057</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--<div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="/contact" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+        <div class="form-group mt-3">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone No" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>-->
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <p ><b>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</b></p>
+        <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+        <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+        <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+        <form name="sentMessage" id="contactForm" action ="/contact" method = "post" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label style="color: #e6b800;"><b>Name</b></label>
+              <input type="text" class="form-control" placeholder="Name" id="name" name = "name"   required >
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label style="color: #e6b800;"><b>Email Address</b></label>
+              <input type="email" class="form-control" placeholder="Email Address" id="email" name = "email" required >
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label style="color: #e6b800;"><b>Phone Number</b></label>
+              <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name = "phone" required >
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label style="color: #e6b800;"><b>Message</b></label>
+              <textarea rows="5" class="form-control" placeholder="Message" id="message"name = "message" ></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+            <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-outline-warning" id="sendMessageButton" ><b>Send</b></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

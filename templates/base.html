@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+  <title>PM MUSIC ACADEMY | Pranit Mawale Music Academy | Piano Music Classes</title>
+  <meta name="description" content="PM Music Academy, Pranit Mawale Music Academy, Music For Little Mozarts Classroom Course (MLMC), Junior Piano Course For Teenage Students, Grand Piano Classes, Electronic Music Production, Pro Keyboard/Synthesizer Course">
+ 
+  <meta content="PM MUSIC ACADEMY, Pranit Mawale,Aggressive Piano (Theme),Piano,Keyboard,Synthesizer, Junior Piano course,electronic music production" name="keywords">
+  <meta name="author" content="Bhagyesh Mawale">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static',filename='assets/img/pmacademylogo.jpeg')}}" rel="icon">
+
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static',filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+  <meta name="google-site-verification" content="bsVmsIn4yY-fwR4QpWUGRHl-atqbC_jjNyx-mCN4_nI" /> 
+
+
+</head>
+<body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+  
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-phone d-flex align-items-center"><span>+91 8879833057</span></i>
+          <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 10AM - 8PM</span></i>
+        </div>
+  
+  
+      </div>
+    </div>
+ 
+    <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="/"><span><font face = "WildWest" size = "6"><b>PM MUSIC ACADEMY</b></font></span></a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="/"><b>Home</b></a></li>
+          <li><a class="nav-link scrollto" href="/about"><b>About</b></a></li>
+   
+          <li><a class="nav-link scrollto" href="/course"><b>Course</b></a></li>
+  
+          <li><a class="nav-link scrollto" href="/gallery"><b>Gallery</b></a></li>
+          </li>
+          {% if 'username' in session %}
+          <li><a class="nav-link scrollto" href="/logout"><b>Logout</b></a></li>
+          {% else %}
+          <li><a class="nav-link scrollto" href="/signup"><b>SignUp</b></a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      {% if 'username' in session %}
+      <a href="/" class="book-a-table-btn text-right scrollto d-none d-lg-flex"><b>{{ session['username'] }}</b></a>
+      {% else %}
+      <a href="/login" class="book-a-table-btn text-right scrollto d-none d-lg-flex"><b>Sign In</b></a>
+      {% endif %}
+  
+
+    </div>
+  </header><!-- End Header -->
+
+    <main>
+        {% block content %}
+        {% endblock %}
+
+        {% block model %}
+        {% endblock %}
+
+    </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PM MUSIC ACADEMY</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+           Designed by <a href="/">pmmusicacademy</a>
+
+        <div class="social-links mt-3">
+          <a href="{{params['twi_url']}}" class="twitter" target = "_blank"><i class="bx bxl-twitter"></i></a>
+          <a href="{{params['fb_url']}}" class="facebook" target = "_blank"><i class="bx bxl-facebook"></i></a>          
+          <a href="{{params['lin_url']}}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </div> 
+  </footer><!-- End Footer -->
+
+ <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
